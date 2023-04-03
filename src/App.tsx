@@ -77,14 +77,17 @@ const App = () => {
     <>
       <GlobalStyle />
       <Wrapper>
-        <h1>REACT QUIZ</h1>
+        <h1>QUIZZY-BREAK</h1>
         {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
-          <button className="start" onClick={startTrivia}>
-            Start
-          </button>
+          <>
+            <p>Let the games begin!</p>
+            <button className="start" onClick={startTrivia}>
+              Start
+            </button>
+          </>
         ) : null}
         {!gameOver ? <p className="score">Score: {score}</p> : null}
-        {isLoading ? <p>Loading Questions...</p> : null}
+        {isLoading ? <p className="loading">Loading Questions...</p> : null}
         {!isLoading && !gameOver && (
           <QuestionCard
             questionNr={number + 1}

@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
 
     * {
         box-sizing: border-box;
-        font-family: 'Catamaran', sans-serif;
+        font-family: 'Fire Sans', sans-serif;
     }
 
 `;
@@ -32,6 +32,13 @@ export const Wrapper = styled.div`
     color: #fff;
   }
 
+  .loading {
+    background: linear-gradient(180deg, #fff, #018ba2);
+    border: 2px solid #00586b;
+    border-radius: 10px;
+    padding: 2rem;
+  }
+
   .score {
     color: #fff;
     font-size: 2rem;
@@ -39,8 +46,7 @@ export const Wrapper = styled.div`
   }
 
   h1 {
-    font-family: Fascinate Inline, Haettenschweiler, "Arial Narrow Bold",
-      sans-serif;
+    font-family: "Cormorant Garamond", serif;
     background-image: linear-gradient(180deg, #fff, #87f1ff);
     background-size: 100%;
     background-clip: text;
@@ -57,7 +63,7 @@ export const Wrapper = styled.div`
   .start,
   .next {
     cursor: pointer;
-    background: linear-gradient(180deg, #fff, #ffcc91);
+    background: linear-gradient(180deg, #fff, #fe7672);
     border: 2px solid #d38558;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
