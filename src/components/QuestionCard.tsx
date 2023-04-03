@@ -21,7 +21,15 @@ const QuestionCard: React.FC<Props> = ({
   questionNr,
   totalQuestions,
 }) => (
-  <Wrapper>
+  <Wrapper
+    initial={{ scale: 0 }}
+    animate={{ rotate: 360, scale: 1 }}
+    transition={{
+      type: "spring",
+      stiffness: 260,
+      damping: 20,
+    }}
+  >
     <p className="number">
       Question: {questionNr} / {totalQuestions}
     </p>
