@@ -27,8 +27,21 @@ const App = () => {
   const startTrivia = async () => {
     setIsLoading(true);
     setGameOver(false);
-
-    //Error handling will go here later on
+    try {
+      const newQuestions = await fetchQuizQuestions(
+        TOTAL_QUESTIONS,
+        Difficulty.EASY
+      );
+      setQuestions(newQuestions);
+      setScore(0);
+      setUserAnswers([]);
+      setNumber(0);
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error);
+      setIsLoading(false);
+      setGameOver(true);
+    }
 
     const newQuestions = await fetchQuizQuestions(
       TOTAL_QUESTIONS,
